@@ -26,4 +26,3 @@ The following image shows the web application's appearance and functionality:
   * Once prompts are answered then the password should be generated and displayed in an alert or written to the page
 
 
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
