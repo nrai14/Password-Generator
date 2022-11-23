@@ -90,6 +90,13 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
+  var length;
+  var lowerCase; 
+  var upperCase; 
+  var numeric;
+  var specialCharacters; 
+
+  length = prompt("Please enter the length of the password");
 
 }
 
@@ -100,8 +107,16 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
+  var answer = prompt("Enter the length of the password");
+  answer = parseInt(answer);
+  console.log(typeof answer);
 
+  if (answer < 10 || answer > 64) {console.log(answer) 
+    alert("Please choose length between 10 to 64 characters"); 
+    return 
+  }
 }
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
@@ -116,3 +131,18 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
+
+
+
+
+/* 
+> Click generate 
+> Prompt length (min 10 max 64)
+> Prompt lowercase
+> Prompt uppercase 
+> Numeric
+> Special characters ($@%&*)
+> At least one character type selected 
+> Final result displayed in an alert or on page 
+
+*/
