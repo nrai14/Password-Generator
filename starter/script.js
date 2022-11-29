@@ -105,11 +105,13 @@ function generatePassword() {
 
   // parseInt converts its first argument to a string, parses that string then returns an integer or NaN 
 
-  if (isNaN(length)) {
+
+  if (isNaN(length) || length === null) {
       alert("Please choose a numerical value");
       return
     }
 
+  
 
   else if (length < 10 || length > 64) {console.log(length) 
     alert("Please choose length between 10 to 64 characters"); 
@@ -125,7 +127,7 @@ function generatePassword() {
 }
 // Function for getting a random element from an array
 function getRandom(arr) {
-
+  var random = myArray 
 }
 
 // Function to generate password with user input
