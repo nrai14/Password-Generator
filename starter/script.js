@@ -107,13 +107,21 @@ function getRandom(arr) {
 function generatePassword() {
   var answer = prompt("Enter the length of the password");
   answer = parseInt(answer);
-  console.log(answer);
+ 
 
-  if (answer < 10 || answer > 64) {console.log(answer) 
+  // parseInt converts its first argument to a string, parses that string then returns an integer or NaN 
+
+  if (isNaN(answer)) {
+      alert("Please choose a numerical value");
+      return
+    }
+
+
+  else if (answer < 10 || answer > 64) {console.log(answer) 
     alert("Please choose length between 10 to 64 characters"); 
     return
   }
-  
+
 }
 
 
