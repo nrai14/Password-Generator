@@ -98,31 +98,38 @@ function getPasswordOptions() {
 
 }
 
+function generatePassword() {
+  var length = prompt("Enter the length of the password");
+  length = parseInt(length);
+ 
+
+  // parseInt converts its first argument to a string, parses that string then returns an integer or NaN 
+
+  if (isNaN(length)) {
+      alert("Please choose a numerical value");
+      return
+    }
+
+
+  else if (length < 10 || length > 64) {console.log(length) 
+    alert("Please choose length between 10 to 64 characters"); 
+    return
+  }
+
+  lowerCase = confirm("Do you want lowercase letters in your password?");
+  upperCase = confirm("Do you want uppercase letters in your password?");
+  numeric = confirm("Do you want numbers in your password?");
+  specialCharacters = confirm("Do you want special characters such as @#!-\\ in your password?")
+
+  return [length, lowerCase, upperCase, numeric, specialCharacters]
+}
 // Function for getting a random element from an array
 function getRandom(arr) {
 
 }
 
 // Function to generate password with user input
-function generatePassword() {
-  var answer = prompt("Enter the length of the password");
-  answer = parseInt(answer);
- 
 
-  // parseInt converts its first argument to a string, parses that string then returns an integer or NaN 
-
-  if (isNaN(answer)) {
-      alert("Please choose a numerical value");
-      return
-    }
-
-
-  else if (answer < 10 || answer > 64) {console.log(answer) 
-    alert("Please choose length between 10 to 64 characters"); 
-    return
-  }
-
-}
 
 
 // Get references to the #generate element
