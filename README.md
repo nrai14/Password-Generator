@@ -4,7 +4,7 @@
 
 This project aimed to create an app that runs in the browser and features dynamically updated HTML and CSS, all powered by JavaScript code. It will add employees who can use it to generate a random password based on criteria they’ve selected by modifying starter code. It has a clean and polished user interface that is responsive, ensuring that it adapts to multiple screen sizes.
 
-The password can include special characters.
+This project was a fundamental piece to further aid my understanding of JavaScript within the context of a real-life situation. 
 
 ## Usage
 
