@@ -26,9 +26,8 @@ The user will experience the following when using this application:
   * Code should validate for each input and at least one character type should be selected
   * Once prompts are answered then the password should be generated and displayed in an alert or written to the page
 
-Link to Repo:
 
-Link to Deployed website: 
+Link to Deployed website: https://nrai14.github.io/Password-Generator/
 
 ## Credits
 
