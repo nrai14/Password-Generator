@@ -96,8 +96,6 @@ function getPasswordOptions() {
   var numeric;
   var specialCharacters; 
 
-  length = prompt("Please enter the length of the password");
-
 }
 
 // Function for getting a random element from an array
@@ -109,12 +107,13 @@ function getRandom(arr) {
 function generatePassword() {
   var answer = prompt("Enter the length of the password");
   answer = parseInt(answer);
-  console.log(typeof answer);
+  console.log(answer);
 
   if (answer < 10 || answer > 64) {console.log(answer) 
     alert("Please choose length between 10 to 64 characters"); 
-    return 
+    return
   }
+  
 }
 
 
