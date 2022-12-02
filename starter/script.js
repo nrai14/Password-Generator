@@ -94,7 +94,7 @@ var length;
 var lowerCase;
 var upperCase;
 var numeric;
-var specialCharacters;
+var specialChar;
 
 var finalPassword = [];
 
@@ -116,7 +116,7 @@ function generatePassword() {
   lowerCase = confirm("Do you want lowercase letters in your password?");
   upperCase = confirm("Do you want uppercase letters in your password?");
   numeric = confirm("Do you want numbers in your password?");
-  specialCharacters = confirm(
+  specialChar = confirm(
     "Do you want special characters such as @#!-\\ in your password?"
   );
 
@@ -128,10 +128,19 @@ function generatePassword() {
   if (lowerCase === true) {
     finalPassword.push(lowerCasedCharacters.join(""));
   }
- console.log(finalPassword);
-  var absolutePassword = finalPassword.join("");
-  
 
+ 
+  
+  if (numeric === true) {
+    finalPassword.push(numericCharacters);
+  }
+
+  if (specialChar === true) {
+    finalPassword.push(specialCharacters)
+  }
+  
+  console.log(finalPassword);
+  var absolutePassword = finalPassword.join("");
   return absolutePassword;
 
   // return [length, lowerCase, upperCase, numeric, specialCharacters]
