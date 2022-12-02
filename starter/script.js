@@ -120,15 +120,19 @@ function generatePassword() {
     "Do you want special characters such as @#!-\\ in your password?"
   );
 
-  if (upperCase === true) {
-    finalPassword.push(upperCasedCharacters);
+  if (upperCase === true) {  // Same as upperCasedCharacters[6] --> it's literally getting a random number/letter
+    console.log(upperCasedCharacters[Math.floor(Math.random() * upperCasedCharacters.length)]);
+    finalPassword.push(upperCasedCharacters.join(""));
   }
 
   if (lowerCase === true) {
-    finalPassword.push(lowerCasedCharacters);
+    finalPassword.push(lowerCasedCharacters.join(""));
   }
+ console.log(finalPassword);
+  var absolutePassword = finalPassword.join("");
   
-  return finalPassword.join();
+
+  return absolutePassword;
 
   // return [length, lowerCase, upperCase, numeric, specialCharacters]
 }
@@ -154,13 +158,11 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 /* 
-> Click generate 
-> Prompt length (min 10 max 64)
-> Prompt lowercase
-> Prompt uppercase 
-> Numeric
-> Special characters ($@%&*)
-> At least one character type selected 
-> Final result displayed in an alert or on page 
+
+Yes no on the options
+send options into array 
+do a for loop 
+condition.length
+repeat using math.floor(math.rnadom() * condition.length )
 
 */
