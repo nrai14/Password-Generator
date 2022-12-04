@@ -90,7 +90,7 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 
-var length;
+var lengthChosen;
 var lowerCase;
 var upperCase;
 var numeric;
@@ -99,16 +99,16 @@ var specialChar;
 var finalPassword = [];
 
 function generatePassword() {
-  var length = prompt("Enter the length of the password");
-  length = parseInt(length);
+  var lengthChosen = prompt("Enter the length of the password");
+  lengthChosen = parseInt(lengthChosen);
 
   // parseInt converts its first argument to a string, parses that string then returns an integer or NaN
 
-  if (isNaN(length) || length === null) {
+  if (isNaN(lengthChosen) || lengthChosen === null) {
     alert("Please choose a numerical value");
     return;
-  } else if (length < 10 || length > 64) {
-    console.log(length);
+  } else if (lengthChosen < 10 || lengthChosen > 64) {
+    console.log(lengthChosen);
     alert("Please choose length between 10 to 64 characters");
     return;
   }
@@ -121,15 +121,15 @@ function generatePassword() {
   );
 
   if (upperCase === true) {  // Same as upperCasedCharacters[6] --> it's literally getting a random number/letter
-    console.log(upperCasedCharacters[Math.floor(Math.random() * upperCasedCharacters.length)]);
-    finalPassword.push(upperCasedCharacters.join(""));
+    // console.log(upperCasedCharacters[Math.floor(Math.random() * upperCasedCharacters.length)]);
+    finalPassword.push(upperCasedCharacters);
   }
 
   if (lowerCase === true) {
-    finalPassword.push(lowerCasedCharacters.join(""));
+    finalPassword.push(lowerCasedCharacters);
   }
 
- 
+ // remember you can do finalPassword.push(upperCasedCharacters.join(""));
   
   if (numeric === true) {
     finalPassword.push(numericCharacters);
@@ -138,17 +138,47 @@ function generatePassword() {
   if (specialChar === true) {
     finalPassword.push(specialCharacters)
   }
-  
-  console.log(finalPassword);
-  var absolutePassword = finalPassword.join("");
-  return absolutePassword;
 
-  // return [length, lowerCase, upperCase, numeric, specialCharacters]
+
+ 
+
 }
+ 
+function randomer(absolutePassword) {
+  for (i = 0; i < lengthChosen; i++) {
+  finalPassword.join(" ")[Math.floor(Math.random() * finalPassword.length)];
+  }
+  
+  
+
+  return absolutePassword;
+ 
+}
+
+  
+  // var confirmPassword = finalPassword[Math.floor(Math.random() * length.length)];
+  
+  // var absolutePassword = confirmPassword;
+
+  // console.log(absolutePassword);
+  // return absolutePassword;
+
+
+  // for (var i = 0; i < lengthChosen; i++) {
+  //   randomPassword = finalPassword.join(" ")[Math.floor(Math.random() * finalPassword.length)];
+
+  // }
+  
+
+
+
 // Function for getting a random element from an array
-function getRandom(arr) {
-  var random = myArray;
+function getRandom() {
+ 
+
 }
+
+
 
 // Function to generate password with user input
 
