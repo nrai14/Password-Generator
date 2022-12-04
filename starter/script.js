@@ -96,7 +96,7 @@ var upperCase;
 var numeric;
 var specialChar;
 
-var finalPassword = [];
+var potentialCharacters = [];
 
 function generatePassword() {
   var lengthChosen = prompt("Enter the length of the password");
@@ -122,65 +122,67 @@ function generatePassword() {
 
   if (upperCase === true) {  // Same as upperCasedCharacters[6] --> it's literally getting a random number/letter
     // console.log(upperCasedCharacters[Math.floor(Math.random() * upperCasedCharacters.length)]);
-    finalPassword.push(upperCasedCharacters);
+    potentialCharacters += upperCasedCharacters;
   }
 
   if (lowerCase === true) {
-    finalPassword.push(lowerCasedCharacters);
+    potentialCharacters += lowerCasedCharacters;
   }
 
- // remember you can do finalPassword.push(upperCasedCharacters.join(""));
+ // remember you can do potentialCharacters.push(upperCasedCharacters.join(""));
   
   if (numeric === true) {
-    finalPassword.push(numericCharacters);
+    potentialCharacters += numericCharacters;
   }
 
   if (specialChar === true) {
-    finalPassword.push(specialCharacters)
+    potentialCharacters += specialCharacters;
+  }
+  else 
+    alert("Please choose one option")
+    return;
+
+
+
+ var generatedPasswordArray = [];
+
+
+ console.log(potentialCharacters);
+
+  for(i = 0; i < lengthChosen; i++) {
+    // console.log("i: ", i);
+    var randomIndex = Math.floor(Math.random() * potentialCharacters.length);
+    randomCharacter = potentialCharacters[randomIndex];
+    generatedPasswordArray.push(randomCharacter);
+    // console.log(generatedPasswordArray);
+    
   }
 
-
- 
-
-}
- 
-function randomer(absolutePassword) {
-  for (i = 0; i < lengthChosen; i++) {
-  finalPassword.join(" ")[Math.floor(Math.random() * finalPassword.length)];
-  }
-  
-  
+  var absolutePassword = generatedPasswordArray.join("");
 
   return absolutePassword;
+
  
 }
 
   
-  // var confirmPassword = finalPassword[Math.floor(Math.random() * length.length)];
-  
-  // var absolutePassword = confirmPassword;
 
-  // console.log(absolutePassword);
-  // return absolutePassword;
-
-
-  // for (var i = 0; i < lengthChosen; i++) {
-  //   randomPassword = finalPassword.join(" ")[Math.floor(Math.random() * finalPassword.length)];
-
-  // }
   
 
 
 
 // Function for getting a random element from an array
 function getRandom() {
- 
 
 }
 
 
 
 // Function to generate password with user input
+function userPassword() {
+ 
+}
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
