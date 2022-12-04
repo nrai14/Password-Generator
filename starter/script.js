@@ -122,26 +122,24 @@ function generatePassword() {
 
   if (upperCase === true) {  // Same as upperCasedCharacters[6] --> it's literally getting a random number/letter
     // console.log(upperCasedCharacters[Math.floor(Math.random() * upperCasedCharacters.length)]);
-    potentialCharacters += upperCasedCharacters;
+    potentialCharacters = potentialCharacters.concat(upperCasedCharacters);
   }
 
   if (lowerCase === true) {
-    potentialCharacters += lowerCasedCharacters;
+    potentialCharacters = potentialCharacters.concat(lowerCasedCharacters);
   }
 
  // remember you can do potentialCharacters.push(upperCasedCharacters.join(""));
   
   if (numeric === true) {
-    potentialCharacters += numericCharacters;
+    potentialCharacters = potentialCharacters.concat(numericCharacters);
   }
 
   if (specialChar === true) {
-    potentialCharacters += specialCharacters;
+    potentialCharacters = potentialCharacters.concat(specialCharacters);
   }
-  else 
-    alert("Please choose one option")
-    return;
-
+  
+  
 
 
  var generatedPasswordArray = [];
@@ -163,12 +161,12 @@ function generatePassword() {
   return absolutePassword;
 
  
+ 
 }
 
   
 
   
-
 
 
 // Function for getting a random element from an array
