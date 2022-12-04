@@ -139,7 +139,8 @@ function generatePassword() {
     potentialCharacters = potentialCharacters.concat(specialCharacters);
   }
   
-  
+  else 
+    alert("Please choose at least one option");
 
 
  var generatedPasswordArray = [];
