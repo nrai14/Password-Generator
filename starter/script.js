@@ -139,10 +139,16 @@ function generatePassword() {
     potentialCharacters = potentialCharacters.concat(specialCharacters);
   }
   
-  else 
+  while (upperCase === false && lowerCase === false && numeric === false && specialChar === false ) {
     alert("Please choose at least one option");
-
-
+    lowerCase = confirm("Do you want lowercase letters in your password?");
+    upperCase = confirm("Do you want uppercase letters in your password?");
+    numeric = confirm("Do you want numbers in your password?");
+    specialChar = confirm(
+      "Do you want special characters such as @#!-\\ in your password?"
+    );
+    }
+    
  var generatedPasswordArray = [];
 
 
